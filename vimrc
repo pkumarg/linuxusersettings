@@ -135,7 +135,7 @@ set pastetoggle=<F11>
 " Do not change 'tabstop' from its default value of 8 with this setup.
 set shiftwidth=4
 set softtabstop=4
-set expandtab
+"set expandtab
 set cindent
 set autoindent
  
@@ -154,4 +154,6 @@ nnoremap <C-L> :nohl<CR><C-L>
  
 "------------------------------------------------------------
 
-colorscheme raggi
+set t_Co=256   " This is may or may not needed.
+set background=light
+colorscheme PaperColor
