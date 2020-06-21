@@ -154,6 +154,7 @@ nnoremap <C-L> :nohl<CR><C-L>
  
 "------------------------------------------------------------
 
-set t_Co=256   " This is may or may not needed.
+syntax enable
+set t_Co=256
 set background=light
-colorscheme PaperColor
+colorscheme primary

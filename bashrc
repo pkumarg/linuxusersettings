@@ -91,6 +91,8 @@ fi
 alias ll='ls -lrt'
 alias la='ls -A'
 alias l='ls -CF'
+alias tmx='tmux -2'
+alias ff='find . -type f -name'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
