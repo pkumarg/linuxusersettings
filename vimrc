@@ -135,7 +135,7 @@ set pastetoggle=<F11>
 " Do not change 'tabstop' from its default value of 8 with this setup.
 set shiftwidth=4
 set softtabstop=4
-"set expandtab
+set expandtab
 set cindent
 set autoindent
  
@@ -154,7 +154,38 @@ nnoremap <C-L> :nohl<CR><C-L>
  
 "------------------------------------------------------------
 
-syntax enable
-set t_Co=256
+set t_Co=256   " This is may or may not needed.
 set background=light
 colorscheme primary
+autocmd BufRead,BufNewFile *.c set filetype=c
+set nowrapscan
+
+set list
+set listchars=tab:\|\ 
+
+set incsearch
+
+" Uncomment the following to have Vim jump to the last position when
+" reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
+"For Python indentation
+"set modeline
+"set tabstop=8 expandtab shiftwidth=4 softtabstop=4
+
+" Work with TAGS
+if !empty($MY_SRC_DIR)
+  set tags=$MY_SRC_DIR/tags
+  cs add $MY_SRC_DIR/cscope.out
+else
+  set tags=/home/$USER/src/tags
+  cs add /home/$USER/src/cscope.out
+endif
+
+" To fix backspace in insert mode
+set backspace=indent,eol,start
+
+" Turn on spell check
+"set spell spelllang=en_us
