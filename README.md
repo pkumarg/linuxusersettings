@@ -1,2 +1,2 @@
 # linuxusersettings
-Sample .vimrc, .profile, .bashrc
+My enviornment settings
