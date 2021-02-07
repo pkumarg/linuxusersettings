@@ -133,8 +133,8 @@ set pastetoggle=<F11>
  
 " Indentation settings for using 4 spaces instead of tabs.
 " Do not change 'tabstop' from its default value of 8 with this setup.
-set shiftwidth=4
-set softtabstop=4
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 set cindent
 set autoindent
@@ -156,7 +156,8 @@ nnoremap <C-L> :nohl<CR><C-L>
 
 set t_Co=256   " This is may or may not needed.
 set background=light
-colorscheme primary
+colorscheme xcodelighthc
+
 autocmd BufRead,BufNewFile *.c set filetype=c
 set nowrapscan
 
