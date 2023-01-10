@@ -92,6 +92,7 @@ alias ll='ls -lrt'
 alias la='ls -A'
 alias l='ls -CF'
 alias tmx='tmux -2'
+alias tmxat='tmx attach-session -t'
 alias ff='find . -type f -name'
 
 # Add an "alert" alias for long running commands.  Use like so:
@@ -117,6 +118,13 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# Some important aliases
+alias gitMod='git status | grep modified'
+alias 7zUltra='7z a -t7z -m0=lzma2 -mx=9 -mfb=64 -md=32m -ms=on'
+alias checkSpaceUsage='sudo du -sh /home/* | grep "^[0-9]*G" | sort -r'
+alias splitFile1GB='split -C 1073741824'
+alias countConflictedFiles='git status | egrep "both modified|both added" | wc -l'
 
 export PS1='[\u@\h \W]'
 export EDITOR=vim
