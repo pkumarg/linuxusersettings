@@ -56,9 +56,18 @@ set wildmenu
 " Show partial commands in the last line of the screen
 set showcmd
 
+" Set color scheme
+set t_Co=256   " This is may or may not needed.
+set background=light
+colorscheme xcodelighthc
+hi Normal ctermfg=0 ctermbg=254
+hi EndOfBuffer ctermfg=0 ctermbg=254
+
 " Highlight searches (use <C-L> to temporarily turn off highlighting; see the
 " mapping of <C-L> below)
 set hlsearch
+set incsearch
+hi Search cterm=NONE ctermfg=black ctermbg=yellow
 
 " Modelines have historically been a source of security vulnerabilities. As
 " such, it may be a good idea to disable them and use the securemodelines
@@ -154,19 +163,12 @@ nnoremap <C-L> :nohl<CR><C-L>
 
 "------------------------------------------------------------
 
-set t_Co=256   " This is may or may not needed.
-set background=light
-colorscheme xcodelighthc
-hi Normal ctermfg=0 ctermbg=254
-hi EndOfBuffer ctermfg=0 ctermbg=254
-
 autocmd BufRead,BufNewFile *.c set filetype=c
 set nowrapscan
 
+" Highlight tab characters with '|'
 set list
 set listchars=tab:\|\ 
-
-set incsearch
 
 " Uncomment the following to have Vim jump to the last position when
 " reopening a file

@@ -1,0 +1,5 @@
+# User specific aliases
+alias ll='ls -lrt'
+alias mlp='multipass'
+
+export PS1='[%n@%m %~]'
