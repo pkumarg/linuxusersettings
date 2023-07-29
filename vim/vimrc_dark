@@ -59,7 +59,7 @@ set showcmd
 " Set color scheme
 set t_Co=256   " This is may or may not needed.
 set background=dark
-colorscheme xcodedarkhc
+colorscheme PaperColor
 
 " Highlight searches (use <C-L> to temporarily turn off highlighting; see the
 " mapping of <C-L> below)

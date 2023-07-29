@@ -59,7 +59,7 @@ set showcmd
 " Set color scheme
 set t_Co=256   " This is may or may not needed.
 set background=light
-colorscheme xcodelighthc
+colorscheme PaperColor
 hi Normal ctermfg=0 ctermbg=254
 hi EndOfBuffer ctermfg=0 ctermbg=254
 
